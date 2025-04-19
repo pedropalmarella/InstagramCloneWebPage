@@ -22,10 +22,6 @@ body {
 
 #wrapper {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .main-container {
@@ -56,15 +52,17 @@ body {
   padding-left: 20px;
 }
 
+
+/* START LOGIN CONTENT */
 .login-box {
-  padding: 20px 0;
+  padding: 0 0 20px 0;
   text-align: center;
   background-color: #ffffff;
   border: 1px solid #e6e6e6
 }
 
-.login-box img {
-  width: 175px;
+.logo-img {
+  width: 250px;
 }
 
 .login-form {
@@ -79,10 +77,19 @@ body {
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   height: 40px;
+  padding: 10px;
+  font-size: 13px;
+  width: 320px;
+}
+
+.login-form input[type="password"] {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  height: 40px;
   margin-top: 10px;
   padding: 10px;
   font-size: 13px;
-  padding: 10px;
   width: 320px;
 }
 
@@ -106,6 +113,9 @@ body {
   width: 320px;
 }
 
+/* END LOGIN CONTENT */
+
+/* START SIGNUP CONTENT */
 .new-box {
   background-color: #ffffff;
   width: 100%;
@@ -122,6 +132,10 @@ body {
   font-weight: bold;
 }
 
+/* END SIGNUP CONTENT */
+
+
+/* START APP STORE CONTENT */
 .stores {
   margin-top: 20px;
   text-align: center;
@@ -136,6 +150,9 @@ body {
   padding: 0 2px;
 }
 
+/* END APP STORE CONTENT */
+
+/* START FOOTER CONTENT */
 footer {
   text-align: center;
   height: 50px;
@@ -156,4 +173,106 @@ footer a {
   text-transform: uppercase;
   padding-left: 20px;
   display: inline-block;
+}
+
+/* END FOOTER CONTENT */
+/*---------------------------------------*/
+
+/* START SIGNUP PAGE CONTENT */
+.signup-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.message {
+  margin: 0 70px 10px 70px;
+}
+
+.message span {
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #8e8e8e;
+}
+
+.cta-button {
+  width: 320px;
+  margin: 10px 0;
+  height: 35px;
+  background-color: #3c96ed;
+  color: #ffffff;
+  border: 0;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.divisor-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.line {
+  height: 1px;
+  background-color: #e6e6e6;
+  width: 35%;
+}
+
+.divisor-tag {
+  font-weight: bold;
+  margin: 0 2.5%;
+  color: #8e8e8e;
+  user-select: none;
+}
+
+.signup-form input[type="text"] {
+  margin-top: 10px;
+}
+
+/* FIM PAGINA SIGNUP */
+
+/* RESPONSIVIDADE */
+@media (max-width: 850px) {
+  .left {
+    display: none;
+  }
+
+  .main-container {
+    width: 70%;
+  }
+
+  .right {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .main-container {
+    width: 90%;
+  }
+
+  .container-signup {
+    width: 90%;
+  }
+
+  input[type="password"],
+  input[type="text"],
+  input[type="submit"] {
+    width: 85%;
+  }
+
+  .cta-button {
+    width: 85%;
+  }
+
+  .message {
+    margin: 10px 25px;
+  }
 }
